@@ -1,10 +1,12 @@
 import express from 'express'
+import userRoutes from './routes/userRoutes.js'
 import escapeRoutes from './routes/escapeRoutes.js'
 const app = express();
 
 app.get('/', (req, res) => {
     res.json({"message" : "Bienvenue sur mon API!"})
 })
+app.use('/', userRoutes)
 
 app.use('/', escapeRoutes)
 
