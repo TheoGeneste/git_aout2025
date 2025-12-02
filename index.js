@@ -6,6 +6,8 @@ const app = express();
 app.get('/', (req, res) => {
     res.json({"message" : "Bienvenue sur mon API!"})
 })
+console.log("test");
+
 app.use('/', userRoutes)
 
 app.use('/', escapeRoutes)
